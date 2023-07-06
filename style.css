@@ -24,6 +24,14 @@ header {
   text-decoration: underline;
 }
 
+.tertiary-headline {
+  font-family: "Raleway", sans-serif;
+  margin: 20px;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
 .name-logo {
   float: left;
   margin: 15px;
@@ -79,6 +87,29 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
   color: rgb(255, 255, 255);
+}
+
+.portfolio-main {
+  display: inline-block;
+  padding: 100px 25px 100px 15px;
+  width: 100%;
+  box-shadow: 0 0 12px -2px black;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.project {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  width: calc(100% - 5em);
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 2em auto;
+  padding: 1em;
+  text-align: center;
 }
 
 .bio-statement {
