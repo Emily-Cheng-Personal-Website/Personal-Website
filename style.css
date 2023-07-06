@@ -16,6 +16,14 @@ header {
   text-align: center;
 }
 
+.secondary-headline {
+  font-family: "Raleway", sans-serif;
+  margin: 20px;
+  text-align: center;
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+
 .name-logo {
   float: left;
   margin: 15px;
@@ -49,11 +57,12 @@ body {
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
 }
 
-main {
-  padding: 100px 25px 100px 25px;
+.home-main {
+  display: flex;
+  text-align: center;
+  padding: 300px 25px 100px 25px;
   box-shadow: 0 0 12px -2px black;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
@@ -62,20 +71,52 @@ main {
   color: rgb(255, 255, 255);
 }
 
+.about-main {
+  display: inline-block;
+  padding: 100px 25px 100px 15px;
+  box-shadow: 0 0 12px -2px black;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
 .bio-statement {
   margin: 40px;
 }
 
-.video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.bio-image {
+  float: left;
+  height: 30vh;
+  margin: 20px;
+  padding-right: 15px;
+}
+
+.bio-block-text {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.gallery {
+  display: inline-block;
+  margin: 10px;
+}
+
+.media {
+  display: inline-block;
+  margin: 10px;
 }
 
 .image-general {
   height: 200px;
   width: auto;
   box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.divider {
+  margin-top: -50px;
+  margin-bottom: -30px;
 }
 
 footer {
