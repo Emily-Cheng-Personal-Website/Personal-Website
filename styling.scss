@@ -1,0 +1,88 @@
+// SASS SHEET FOR WEBSITE
+
+// ---------------------- VARIABLES ---------------------------- //
+// BODY VARIABLES
+$body-text-color: black;
+$body-text-size: 16;
+$body-color: rgb(191, 191, 242);
+$background-color: white;
+
+// HEADER VARIABLES
+$nav-text-color: goldenrod;
+$header-font-size: 3rem;
+$header-background-color: navy;
+
+* {
+    box-sizing: border-box;
+}
+
+// ---------------------- MAIN CODE BELOW ---------------------------- //
+
+// styling header sections
+header {
+    position: fixed;
+    background-color: $background-color;
+    background-origin: padding-box;
+    background-repeat: repeat;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0.5em 1 em;
+    font-family: 'Contrail One', sans-serif;
+    font-size: $header-font-size;
+}
+
+.headline {
+    font-family: 'Lexend Peta', sans-serif;
+}
+
+.name-logo {
+    float: left;
+    margin: 15px 15px 15px 15px;
+    font-size: $header-font-size;
+}
+
+.top-links{
+    color: $nav-text-color;
+    margin: 15px 15px 15px 15px;
+}
+
+nav{
+    display: flex;
+    float: right;
+}
+
+// styling body
+body {
+    // font-family: "Lexend-Peta", sans-serif;
+    height: 100%;
+    // padding: 10;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: $body-color;
+    color: $body-text-color;
+}
+
+// main section
+main {
+    padding: 100px 25px 100px 25px;
+    box-shadow: 0 0 12px -2px black;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+// * {
+//     box-sizing: border-box;
+// }
+// link editing
+// .active{
+
+// }
+
+// styling video
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
