@@ -2,82 +2,100 @@
 
 // ---------------------- VARIABLES ---------------------------- //
 // BODY VARIABLES
-$body-text-color: black;
-$body-text-size: 16;
-$body-color: rgb(191, 191, 242);
+$body-text-color: rgb(255, 255, 255);
+$body-text-size: 2rem;
+$body-color: rgb(0, 0, 0, 0.5);
 $background-color: white;
 
 // HEADER VARIABLES
-$nav-text-color: goldenrod;
+$nav-text-color: rgb(255, 255, 255);
 $header-font-size: 3rem;
 $header-background-color: navy;
 
-* {
-    box-sizing: border-box;
-}
+// FOOTER VARIABLES
+$footer-font-size: 1rem;
+$footer-text-color: white;
+$footer-background-color: rgb(0, 0, 0, 0.6);
+
+// MISC VARIABLES
+$box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5);
 
 // ---------------------- MAIN CODE BELOW ---------------------------- //
 
+// ------------- HEADER ---------------- //
 // styling header sections
 header {
     position: fixed;
-    background-color: $background-color;
-    background-origin: padding-box;
-    background-repeat: repeat;
     top: 0px;
     left: 0px;
     right: 0px;
     padding: 0.5em 1 em;
-    font-family: 'Contrail One', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: $header-font-size;
+    background: rgb(3,14,45, 0.8);
+    background: linear-gradient(0deg, rgba(1, 7, 23, 0.6) 0%, rgba(6, 21, 40, 0.6) 44%, rgba(0, 27, 20, 0.5) 90%); 
 }
 
 .headline {
-    font-family: 'Lexend Peta', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin: 20px;
+    text-align: center;
 }
 
 .name-logo {
     float: left;
-    margin: 15px 15px 15px 15px;
+    margin: 15px;
     font-size: $header-font-size;
+    text-decoration: none;
+    color: white;
 }
 
-.top-links{
+.top-links {
     color: $nav-text-color;
-    margin: 15px 15px 15px 15px;
+    margin: 15px;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links a.active {
+    border-bottom: 1px solid white;
+    color: goldenrod;
 }
 
 nav{
-    display: flex;
     float: right;
 }
 
+// ------------- BODY ---------------- //
+
 // styling body
 body {
-    // font-family: "Lexend-Peta", sans-serif;
+    font-family: "Lexend-Peta", sans-serif;
+    background-image: url(https://tinyurl.com/y6mmb6sp);
+    background-size: cover;
     height: 100%;
-    // padding: 10;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: $body-color;
-    color: $body-text-color;
+    text-align: center;
+
 }
 
-// main section
+// main text section
 main {
     padding: 100px 25px 100px 25px;
     box-shadow: 0 0 12px -2px black;
     min-height: 100vh;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: $body-text-size;
+    background-color: $body-color;
+    color: $body-text-color;
 }
 
-// * {
-//     box-sizing: border-box;
-// }
-// link editing
-// .active{
-
-// }
+.bio-statement {
+    margin: 40px;
+}
 
 // styling video
 
@@ -85,4 +103,38 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// styling images
+.image-general {
+    height: 200px;
+    width: auto;
+    box-shadow: $box-shadow;
+}
+
+// ------------- FOOTER ---------------- //
+
+// footer
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0.1em 0.1em;
+    font-family: 'Raleway', sans-serif;
+    font-size: $footer-font-size;
+    color: white;
+    background: $footer-background-color;
+    text-align: center;
+    display: inline-block;
+}
+
+.social-media {
+    display: inline-block;
+    margin: 15px;
+    font-size: $footer-font-size;
+}
+
+.sm-images {
+    height: 30px;
 }

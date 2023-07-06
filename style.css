@@ -1,59 +1,105 @@
-* {
-  box-sizing: border-box;
-}
-
 header {
   position: fixed;
-  background-color: white;
-  background-origin: padding-box;
-  background-repeat: repeat;
   top: 0px;
   left: 0px;
   right: 0px;
   padding: 0.5em 1 em;
-  font-family: "Contrail One", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 3rem;
+  background: rgba(3, 14, 45, 0.8);
+  background: linear-gradient(0deg, rgba(1, 7, 23, 0.6) 0%, rgba(6, 21, 40, 0.6) 44%, rgba(0, 27, 20, 0.5) 90%);
 }
 
 .headline {
-  font-family: "Lexend Peta", sans-serif;
+  font-family: "Raleway", sans-serif;
+  margin: 20px;
+  text-align: center;
 }
 
 .name-logo {
   float: left;
-  margin: 15px 15px 15px 15px;
+  margin: 15px;
   font-size: 3rem;
+  text-decoration: none;
+  color: white;
 }
 
 .top-links {
+  color: rgb(255, 255, 255);
+  margin: 15px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links a.active {
+  border-bottom: 1px solid white;
   color: goldenrod;
-  margin: 15px 15px 15px 15px;
 }
 
 nav {
-  display: flex;
   float: right;
 }
 
 body {
+  font-family: "Lexend-Peta", sans-serif;
+  background-image: url(https://tinyurl.com/y6mmb6sp);
+  background-size: cover;
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: rgb(191, 191, 242);
-  color: black;
+  text-align: center;
 }
 
 main {
   padding: 100px 25px 100px 25px;
   box-shadow: 0 0 12px -2px black;
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.bio-statement {
+  margin: 40px;
 }
 
 .video {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.image-general {
+  height: 200px;
+  width: auto;
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0.1em 0.1em;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  display: inline-block;
+}
+
+.social-media {
+  display: inline-block;
+  margin: 15px;
+  font-size: 1rem;
+}
+
+.sm-images {
+  height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
