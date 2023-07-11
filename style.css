@@ -58,6 +58,14 @@ nav {
   float: right;
 }
 
+.links a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  box-shadow: 0 0 25px 3px rgba(255, 187, 0, 0.9);
+  transition: all 200ms ease-out;
+  color: goldenrod;
+}
+
 body {
   font-family: "Lexend-Peta", sans-serif;
   background-image: url(https://tinyurl.com/y6mmb6sp);
