@@ -24,7 +24,7 @@ header {
 
 .tertiary-headline {
   font-family: "Raleway", sans-serif;
-  margin: 20px;
+  margin: 1vh;
   text-align: center;
   font-size: 3rem;
   text-decoration: underline;
@@ -32,10 +32,37 @@ header {
 
 .name-logo {
   float: left;
-  margin: 15px;
+  margin: 0.75vh 0 0.5vh 0.5vw;
   font-size: 3rem;
   text-decoration: none;
   color: white;
+  -webkit-text-stroke: 7px transparent;
+  background-image: linear-gradient(-225deg, #ffffff 0%, #7128c0 29%, #ff1361 67%, #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.name-logo a:hover {
+  background-image: linear-gradient(-225deg, #021736 0%, #3fd768 29%, #00EC9E 67%, #3f03d5 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
 }
 
 .top-links {
@@ -50,6 +77,10 @@ header {
 .links a.active {
   border-bottom: 1px solid white;
   color: goldenrod;
+}
+
+section a:visited {
+  color: skyblue;
 }
 
 nav {
@@ -123,8 +154,8 @@ body {
 }
 
 .portfolio-main {
-  display: inline-block;
-  padding: 100px 25px 100px 15px;
+  display: grid;
+  padding: 10vh 0;
   width: 100%;
   box-shadow: 0 0 12px -2px black;
   min-height: 100vh;

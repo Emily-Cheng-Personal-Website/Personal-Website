@@ -23,6 +23,7 @@ $footer-background-color: rgb(0, 0, 0, 0.6);
 $box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5); // basic drop shadow
 $border-shadow: 0 0 25px 3px rgba(255, 187, 0, 0.9);
 $image-shadow: 0 0 12px 0 rgba(255, 187, 0, 0.7), 0 0 20px 0 rgba(255, 187, 0, 0.3);
+$portfolio-shadow: 0 0 12px -2px black;
 
 // ---------------------- MAIN CODE BELOW ---------------------------- //
 
@@ -54,18 +55,63 @@ header {
 
 .tertiary-headline {
     font-family: 'Raleway', sans-serif;
-    margin: 20px;
+    margin: 1vh;
     text-align: center;
     font-size: 3rem;
     text-decoration: underline;
 }
 
-.name-logo {
+.name-logo { // name at top left of page
     float: left;
-    margin: 15px;
+    margin: 0.75vh 0 0.5vh 0.5vw;
     font-size: $header-font-size;
     text-decoration: none;
     color: white;
+    // makes font thicker without having to use bold setting in the fonts download section (i.e. font outline)
+    // note this only works because the text has been clipped to a background image 
+    -webkit-text-stroke: 7px transparent; 
+
+    // animate "logo" text
+    background-image: linear-gradient(
+    -225deg,
+    #ffffff 0%,
+    #7128c0 29%,
+    #ff1361 67%,
+    #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text; // attaches color gradient onto text only 
+    color: transparent; // allows gradient to show
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite; // causes the gradient to move 
+}
+
+@keyframes textclip { // defines waypoints for the animation to move to (i.e. transition points)
+    to {
+        background-position: 200% center;
+    }
+}
+
+.name-logo a:hover {
+    // styling name logo link effects to invert animation colors on hover
+    background-image: linear-gradient(
+        -225deg,
+        #021736 0%,
+        #3fd768 29%,
+        #00EC9E 67%,
+        #3f03d5 100%
+        );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text; // attaches color gradient onto text only 
+    color: transparent; // allows gradient to show
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite; // causes the gradient to move 
 }
 
 .top-links {
@@ -80,6 +126,10 @@ header {
 .links a.active {
     border-bottom: 1px solid white;
     color: goldenrod;
+}
+
+section a:visited {
+    color: skyblue;
 }
 
 nav{
@@ -167,10 +217,10 @@ body {
 
 // portfolio main text section
 .portfolio-main {
-    display: inline-block;
-    padding: 100px 25px 100px 15px;
+    display: grid;
+    padding: 10vh 0;
     width: 100%;
-    box-shadow: 0 0 12px -2px black;
+    box-shadow: $portfolio-shadow;
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
     background-color: $body-color;
