@@ -3,38 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website - Home</title>
+    <title>Personal Website - Contact</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
-<!-- home page -->
 <body>
     <header>
         <span><h1 class="name-logo">E M I L Y C H E N G</a></h1></span>
         <nav class="links">
             <div class="top-links">
-                <a class="active" href="index.html">Home</a>
+                <a class="top-links" href="index.html">Home</a>
                 <a class="top-links" href="about.html">About</a>
                 <a class="top-links" href="portfolio.html">Portfolio</a>
-                <a class="top-links" href="contact.html">Contact</a>
+                <a class="active" href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
-    <!-- biography -->
-    <main class="home-main">
-        <section>
-            <div class="headline">
-                <h1>ENGINEER, DEVELOPER, CREATOR</h1> 
-            </div>
-            <div class="bio-statement">
-                <span>Exploring the world and helping others tell stories by combining art and technology.</span>
-                <span><p>If we can dream it, we can build it together.</p></span>
-            </div>
+    <!-- main page -->
+    <main class="contact-main">
+        <section class="contact-outer-wrapper">
+            <form action="" class="contactForms-container">
+                <div class="formInput"> 
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName">
+                </div>
+                <div class="formInput"> 
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div class="formInput-message"></div>
+                    <textarea name="message" id="message" cols="30" rows="10">Enter message here</textarea>
+                </div>
+            </form>
+            <form action="externalHTML.html" method="GET" class="formInput-submit">
+                <input type="submit" name="submit" value="Submit">
+            </form>
         </section>
-        <br>
     </main>
     <br>
     <!-- social media footer -->
@@ -44,10 +54,9 @@
                 <img class="sm-images" src="https://tinyurl.com/4mwus4rc" alt="the linkedin logo, a blue square with a white 'in' inside"></a>
             <a href="https://www.youtube.com/c/gisula" target="_blank">
                 <img class="sm-images" src="https://tinyurl.com/2sae6wtn" alt="the youtube logo, a red rectangle with a white play button triangle inside"></a>
-                <a href="https://open.spotify.com/artist/1PELU1134qazub9a4GtJel" target="_blank">
+            <a href="https://open.spotify.com/artist/1PELU1134qazub9a4GtJel" target="_blank">
                     <img class="sm-images" src="https://tinyurl.com/ys3v5tzp" alt="the spotify logo, a green circle with a white curved lines stacked inside"></a>
         </div>
     </footer>
 </body>
 </html>
-
