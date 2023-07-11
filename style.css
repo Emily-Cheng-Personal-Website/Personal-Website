@@ -12,13 +12,11 @@ header {
 
 .headline {
   font-family: "Raleway", sans-serif;
-  margin: 20px;
   text-align: center;
 }
 
 .secondary-headline {
   font-family: "Raleway", sans-serif;
-  margin: 20px;
   text-align: center;
   font-size: 1.7rem;
   text-decoration: underline;
@@ -60,7 +58,9 @@ nav {
 
 .links a:hover {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 5px;
   box-shadow: 0 0 25px 3px rgba(255, 187, 0, 0.9);
   transition: all 200ms ease-out;
   color: goldenrod;
@@ -68,18 +68,18 @@ nav {
 
 body {
   font-family: "Lexend-Peta", sans-serif;
-  background-image: url(https://tinyurl.com/y6mmb6sp);
+  background: url(https://tinyurl.com/y6mmb6sp) fixed;
   background-size: cover;
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .home-main {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  padding: 300px 25px 100px 25px;
+  padding: 30vh 0;
   box-shadow: 0 0 12px -2px black;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
@@ -89,13 +89,37 @@ body {
 }
 
 .about-main {
-  display: inline-block;
-  padding: 100px 25px 100px 15px;
+  display: grid;
+  padding: 10vh 1vw;
   box-shadow: 0 0 12px -2px black;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
   background-color: rgba(0, 0, 0, 0.5);
   color: rgb(255, 255, 255);
+}
+
+.bio-block {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.creative-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2vh 5vw;
+}
+
+.hobbies-block {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  font-size: 1.5rem;
+  padding: 2vh 5vw;
 }
 
 .portfolio-main {
@@ -119,68 +143,6 @@ body {
   margin: 2em auto;
   padding: 1em;
   text-align: center;
-}
-
-.bio-statement {
-  margin: 40px;
-}
-
-.bio-image {
-  float: left;
-  height: 30vh;
-  margin: 20px;
-  padding-right: 15px;
-}
-
-.bio-block-text {
-  text-align: center;
-  margin: 20px;
-  font-size: 1.5rem;
-}
-
-.gallery {
-  display: inline-block;
-  margin: 10px;
-}
-
-.media {
-  display: inline-block;
-  margin: 10px;
-}
-
-.image-general {
-  height: 200px;
-  width: auto;
-  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.divider {
-  margin-top: -50px;
-  margin-bottom: -30px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  padding: 0.1em 0.1em;
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  display: inline-block;
-}
-
-.social-media {
-  display: inline-block;
-  margin: 15px;
-  font-size: 1rem;
-}
-
-.sm-images {
-  height: 30px;
 }
 
 .contact-main {
@@ -226,6 +188,57 @@ footer {
   display: grid;
   align-items: center;
   padding: 3vh 15vw;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.media {
+  display: flex;
+  margin: 10px;
+}
+
+.media a:hover {
+  box-shadow: 0 0 12px 0 rgba(255, 187, 0, 0.7), 0 0 20px 0 rgba(255, 187, 0, 0.3);
+  transition: all 200ms ease-out;
+  color: goldenrod;
+}
+
+.image-general {
+  height: 200px;
+  width: auto;
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.divider {
+  margin-top: -50px;
+  margin-bottom: -30px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0.1em 0.1em;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  display: inline-block;
+}
+
+.social-media {
+  display: inline-block;
+  margin: 15px;
+  font-size: 1rem;
+}
+
+.sm-images {
+  height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

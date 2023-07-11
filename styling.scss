@@ -1,4 +1,5 @@
 // SASS SHEET FOR WEBSITE
+// This code is annotated for my future reference :)
 
 // ---------------------- VARIABLES ---------------------------- //
 // BODY VARIABLES
@@ -21,6 +22,7 @@ $footer-background-color: rgb(0, 0, 0, 0.6);
 // MISC VARIABLES & FUNCTIONS
 $box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5), 0 7px 10px 0 rgba(0, 0, 0, 0.5); // basic drop shadow
 $border-shadow: 0 0 25px 3px rgba(255, 187, 0, 0.9);
+$image-shadow: 0 0 12px 0 rgba(255, 187, 0, 0.7), 0 0 20px 0 rgba(255, 187, 0, 0.3);
 
 // ---------------------- MAIN CODE BELOW ---------------------------- //
 
@@ -38,15 +40,13 @@ header {
     background: linear-gradient(0deg, rgba(1, 7, 23, 0.6) 0%, rgba(6, 21, 40, 0.6) 44%, rgba(0, 27, 20, 0.5) 90%); 
 }
 
-.headline {
+.headline { // big text on home page
     font-family: 'Raleway', sans-serif;
-    margin: 20px;
     text-align: center;
 }
 
-.secondary-headline {
+.secondary-headline { // big text on about page
     font-family: 'Raleway', sans-serif;
-    margin: 20px;
     text-align: center;
     font-size: 1.7rem;
     text-decoration: underline;
@@ -89,30 +89,35 @@ nav{
 .links a:hover {
     // styling header link hover effects 
     background-color: rgba(0,0,0,0.5);
-    border-radius: 3px;
+    margin: 3px;
+    padding: 5px; // hover & margin together in this hover section causes the "zoom-in" effect 
+    border-radius: 5px;
     box-shadow: $border-shadow;
     transition: all 200ms ease-out;
     color: goldenrod;
 }
 
-// ------------- BODY ---------------- //
+// -------------------------- BODY ----------------------------- //
 
 // styling body
 body {
     font-family: "Lexend-Peta", sans-serif;
-    background-image: url(https://tinyurl.com/y6mmb6sp);
+    // creates a static background image (doesn't move with scroll)
+    background: url(https://tinyurl.com/y6mmb6sp) fixed; 
     background-size: cover;
     height: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    overflow: hidden;
 }
+
+// -------- HOME PAGE ---------- //
 
 // home main text section
 .home-main {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    padding: 300px 25px 100px 25px;
+    padding: 30vh 0;
     box-shadow: 0 0 12px -2px black;
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
@@ -121,16 +126,44 @@ body {
     color: $body-text-color;
 }
 
+// -------- ABOUT PAGE ---------- //
+
 // about main text section
 .about-main {
-    display: inline-block;
-    padding: 100px 25px 100px 15px;
+    display: grid;
+    padding: 10vh 1vw;
     box-shadow: 0 0 12px -2px black;
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
     background-color: $body-color;
     color: $body-text-color;
 }
+
+.bio-block {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: $body-text-size-small;
+}
+
+.creative-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: $body-text-size-small;
+    padding: 2vh 5vw;
+}
+
+.hobbies-block {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    font-size: $body-text-size-small;
+    padding: 2vh 5vw;
+}
+
+// -------- PORTFOLIO PAGE ---------- //
 
 // portfolio main text section
 .portfolio-main {
@@ -156,76 +189,7 @@ body {
     text-align: center;
 }
 
-.bio-statement {
-    margin: 40px;
-}
-
-.bio-image {
-    float: left;
-    height: 30vh;
-    margin: 20px;
-    padding-right: 15px;
-}
-
-.bio-block-text {
-    text-align: center;
-    margin: 20px;
-    font-size: $body-text-size-small;
-}
-
-// styling media
-
-.gallery {
-    display: inline-block;
-    margin: 10px;
-}
-
-.media {
-    display: inline-block;
-    margin: 10px;
-}
-
-// styling images
-.image-general {
-    height: 200px;
-    width: auto;
-    box-shadow: $box-shadow;
-}
-
-// styling divider line
-.divider {
-    margin-top: -50px;
-    margin-bottom: -30px;
-}
-
-// ------------- FOOTER ---------------- //
-
-// footer
-footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    padding: 0.1em 0.1em;
-    font-family: 'Raleway', sans-serif;
-    font-size: $footer-font-size;
-    color: white;
-    background: $footer-background-color;
-    text-align: center;
-    display: inline-block;
-}
-
-.social-media {
-    display: inline-block;
-    margin: 15px;
-    font-size: $footer-font-size;
-}
-
-.sm-images {
-    height: 30px;
-}
-
-// --------------- CONTACT PAGE -------------- // 
+// -------- CONTACT PAGE ---------- //
 
 // contact main text section
 .contact-main {
@@ -274,3 +238,65 @@ footer {
     align-items: center;
     padding: 3vh 15vw;
 }
+
+// -------- MISC ---------- //
+
+// styling media
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.media {
+    display: flex;
+    margin: 10px;
+}
+
+// styling image hover effects 
+.media a:hover {
+    box-shadow: $image-shadow;
+    transition: all 200ms ease-out;
+    color: goldenrod;
+}
+
+// styling images
+.image-general {
+    height: 200px;
+    width: auto;
+    box-shadow: $box-shadow;
+}
+
+// styling divider line
+.divider {
+    margin-top: -50px;
+    margin-bottom: -30px;
+}
+
+// ------------- FOOTER ---------------- //
+
+// footer
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0.1em 0.1em;
+    font-family: 'Raleway', sans-serif;
+    font-size: $footer-font-size;
+    color: white;
+    background: $footer-background-color;
+    text-align: center;
+    display: inline-block;
+}
+
+.social-media {
+    display: inline-block;
+    margin: 15px;
+    font-size: $footer-font-size;
+}
+
+.sm-images {
+    height: 30px;
+}
+
