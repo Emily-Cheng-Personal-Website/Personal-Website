@@ -184,8 +184,12 @@ footer {
 }
 
 .contact-main {
-  display: grid;
-  padding: 25vh 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5vh 0;
   box-shadow: 0 0 12px -2px black;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
