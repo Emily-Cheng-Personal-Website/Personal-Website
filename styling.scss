@@ -8,6 +8,7 @@ $body-text-size: 2rem;
 $body-text-size-small: 1.5rem;
 $body-color: rgb(0, 0, 0, 0.5);
 $background-color: white;
+$font-family: "Ysabeau Office", sans-serif;
 
 // HEADER VARIABLES
 $nav-text-color: rgb(255, 255, 255);
@@ -30,31 +31,32 @@ $portfolio-shadow: 0 0 12px -2px black;
 // ------------- HEADER ---------------- //
 // styling header sections
 header {
+    z-index:1000;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     padding: 0.5em 1 em;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     font-size: $header-font-size;
     background: rgb(3,14,45, 0.8);
     background: linear-gradient(0deg, rgba(1, 7, 23, 0.6) 0%, rgba(6, 21, 40, 0.6) 44%, rgba(0, 27, 20, 0.5) 90%); 
 }
 
 .headline { // big text on home page
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     text-align: center;
 }
 
 .secondary-headline { // big text on about page
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     text-align: center;
     font-size: 1.7rem;
     text-decoration: underline;
 }
 
 .tertiary-headline {
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     margin: 1vh;
     text-align: center;
     font-size: 3rem;
@@ -151,8 +153,8 @@ nav{
 
 // styling body
 body {
-    font-family: "Lexend-Peta", sans-serif;
-    // creates a static background image (doesn't move with scroll)
+    font-family: $font-family;
+    // the "fixed" property creates a static background image (doesn't move with scroll)
     background: url(https://tinyurl.com/y6mmb6sp) fixed; 
     background-size: cover;
     height: 100%;
@@ -170,7 +172,7 @@ body {
     padding: 30vh 0;
     box-shadow: 0 0 12px -2px black;
     min-height: 100vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     font-size: $body-text-size;
     background-color: $body-color;
     color: $body-text-color;
@@ -184,7 +186,7 @@ body {
     padding: 10vh 1vw;
     box-shadow: 0 0 12px -2px black;
     min-height: 100vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     background-color: $body-color;
     color: $body-text-color;
 }
@@ -222,13 +224,13 @@ body {
     width: 100%;
     box-shadow: $portfolio-shadow;
     min-height: 100vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     background-color: $body-color;
     color: $body-text-color;
 }
 
 .project {
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     font-size: $body-text-size;
     width: calc(100% - 5em);
     background: rgba(0,0,0,0.5);
@@ -248,39 +250,35 @@ body {
     align-content: center;
     justify-content: center;
     text-align: center;
-    padding: 5vh 0;
     box-shadow: 0 0 12px -2px black;
     min-height: 100vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     font-size: $body-text-size-small;
     background-color: $body-color;
     color: $body-text-color;
 }
 
 // styling contact form fields
-
 .contactForms-container {
     display: grid;
 }
 
 .contact-outer-wrapper {
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding: 3vh 5vw;
 }
 
 .formInput {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 2vh;
 }
 
 .formInput-message {
     align-items: center;
     justify-content: center;
-    height: 50%;
-    width: 50%;
-    padding: 0.5rem;
+    max-width: 50vw;
+    padding: 0.5vw;
 }
 
 .formInput-submit {
@@ -301,6 +299,10 @@ body {
 .media {
     display: flex;
     margin: 10px;
+}
+
+.gif {
+    transform: scale(0.5);
 }
 
 // styling image hover effects 
@@ -332,21 +334,141 @@ footer {
     left: 0px;
     right: 0px;
     padding: 0.1em 0.1em;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     font-size: $footer-font-size;
     color: white;
     background: $footer-background-color;
     text-align: center;
-    display: inline-block;
+    display: grid;
 }
 
 .social-media {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 15px;
     font-size: $footer-font-size;
 }
 
 .sm-images {
     height: 30px;
+    margin: 0.5vw;
 }
 
+// -------------------------- SCALING FOR DEVICES ----------------------------- //
+// Scaling for ipads/tablets
+@media (max-width:1024px) {
+    body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    .name-logo {
+        margin: 0.75vh 0 0vh 11vw;
+    }
+
+    nav {
+        margin: -2vh 4vw 0vh 3vw;
+        float: left;
+    }
+
+    // --------- modifying home page ------------- //
+
+    .home-main {
+        margin: 0vh 10vw !important;
+        margin-bottom: -10vh !important;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 15vh 1vw; 
+        max-height: 100vh;
+    }
+
+    // --------- modifying about page ------------- //
+
+    .about-main {
+        margin: 0vh 10vw !important; // locks in proportions of page to show the edges
+        margin-bottom: -10vh !important;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden; // clips page to proportions
+        padding: 15vh 5vw;
+        min-height: 100vh;
+    }
+
+    .divider {
+        margin: -50px 10vw -50px -23vw;
+        transform: scaleX(0.7);
+    }
+
+    .creative-block > span {
+        margin: 0vh 10vw -3vh -23vw !important;
+        padding: 1vh 10vw 3vh 20vw !important;
+    }
+
+    .media {
+        margin: 2vh 20vw 2vh -2.5vw !important;
+    }
+
+    .gallery {
+        display: grid;
+        justify-items: center;
+        margin: 0 !important;
+        padding: 0vh 14vw;
+        .media {
+            margin: 1vh 0 !important;
+        }
+    }
+
+    .hobbies-block {
+        display: grid;
+        justify-items: center;
+        span {
+            margin: 3vh 0 !important;
+            text-align: center;
+        }
+    }
+
+    // --------- modifying portfolio page ------------- //
+    .portfolio-main {
+        margin: 0vh 0vw 0vh 10vw !important;
+        padding: 0vh -25vw 0 25vw !important;
+        margin-bottom: -10vh !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80% !important;
+    }
+
+    .tertiary-headline {
+        margin: 8vh 0 -3vh 0 ;
+    }
+
+    .project {
+        padding: -10vh 10vw;
+    }
+
+    // --------- modifying contact page ------------- //
+    .contact-main {
+        margin: -20vh 10vw -10vh 10vw !important; // locks in proportions of page to show the edges
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden; // clips page to proportions
+        padding: 15vh 5vw;
+        // min-height: 100vh;
+    }
+
+    .formInput-message {
+        margin-left: 7vw;
+        max-width: 50vw;
+        padding: 0.5vw;
+    }
+}
+
+// // scaling for mobile
+// @media (max-width:480px) {
+//     html {
+//         transform: scale(0.5);
+//     }
+// }
