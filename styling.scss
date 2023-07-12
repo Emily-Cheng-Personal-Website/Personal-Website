@@ -6,6 +6,7 @@
 $body-text-color: rgb(255, 255, 255);
 $body-text-size: 2rem;
 $body-text-size-small: 1.5rem;
+$body-text-size-smallest: 1.2rem;
 $body-color: rgb(0, 0, 0, 0.5);
 $background-color: white;
 $font-family: "Ysabeau Office", sans-serif;
@@ -356,7 +357,7 @@ footer {
 }
 
 // -------------------------- SCALING FOR DEVICES ----------------------------- //
-// Scaling for ipads/tablets
+// ----------------------- Scaling for ipads/tablets ----------------------- //
 @media (max-width:1024px) {
     body {
         margin: 0 auto !important;
@@ -377,11 +378,16 @@ footer {
     .home-main {
         margin: 0vh 10vw !important;
         margin-bottom: -10vh !important;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
-        padding: 15vh 1vw; 
-        max-height: 100vh;
+        min-height: 100vh;
+    }
+
+    .bio-statement {
+        margin: 0 10vw;
+        padding: 0 10vw;
     }
 
     // --------- modifying about page ------------- //
@@ -401,6 +407,10 @@ footer {
         transform: scaleX(0.7);
     }
 
+    .creative-block {
+        display: grid !important;
+    }
+
     .creative-block > span {
         margin: 0vh 10vw -3vh -23vw !important;
         padding: 1vh 10vw 3vh 20vw !important;
@@ -408,6 +418,7 @@ footer {
 
     .media {
         margin: 2vh 20vw 2vh -2.5vw !important;
+        transform: scale(0.8);
     }
 
     .gallery {
@@ -416,7 +427,7 @@ footer {
         margin: 0 !important;
         padding: 0vh 14vw;
         .media {
-            margin: 1vh 0 !important;
+            margin: -1vh 0 !important;
         }
     }
 
@@ -456,7 +467,6 @@ footer {
         flex-wrap: wrap;
         overflow: hidden; // clips page to proportions
         padding: 15vh 5vw;
-        // min-height: 100vh;
     }
 
     .formInput-message {
@@ -466,9 +476,147 @@ footer {
     }
 }
 
-// // scaling for mobile
-// @media (max-width:480px) {
-//     html {
-//         transform: scale(0.5);
-//     }
-// }
+// --------------- SCALING FOR MOBILE  ------------------ //
+@media (max-width:480px) {
+    body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    .name-logo {
+        transform: scale(0.8);
+        margin: 0;
+    }
+
+    nav {
+        transform: scale(0.6);
+    }
+
+    .links {
+        // display: grid;
+        margin: -8vw -10vw 0 -38vw !important;
+        width: 180%; // makes section horizontal line instead of wrapped (expands box size) 
+    }
+
+    // --------- modifying home page ------------- //
+
+    .home-main {
+        margin: 0vh 10vw !important;
+        margin-bottom: -10vh !important;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 15vh 1vw; 
+        max-height: 100vh;
+    }
+
+    // --------- modifying about page ------------- //
+
+    .about-main {
+        margin: 0vh 10vw !important; // locks in proportions of page to show the edges
+        margin-bottom: -10vh !important;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden; // clips page to proportions
+        padding: 15vh 5vw;
+        min-height: 100vh;
+    }
+
+    .image-general {
+        margin: 0 2vw;
+    }
+
+    .divider {
+        margin: -50px 0vw -50px -60vw;
+        transform: scaleX(0.3);
+    }
+
+    .bio-block {
+        margin: 0vh 10vw -3vh -21.5vw !important;
+        padding: 1vh 10vw 3vh 20vw !important;
+    }
+
+    .bio-block > span {
+        text-justify: inter-word;
+    }
+
+    .creative-block {
+        display: grid !important;
+        img {
+            transform: scale(0.8);
+            margin: -8vh -26vw;
+        }
+        span {
+            align-items: center;
+            justify-content: center;
+        }
+        margin: 0 5vw;
+    }
+
+    .media {
+        margin: 2vh 20vw 2vh -2.5vw !important;
+    }
+
+    .gallery {
+        display: grid;
+        justify-items: center;
+        margin: 0 !important;
+        padding: 0vh 0vw;
+        .media {
+            margin: 0 -5vw !important;
+        }
+    }
+
+    .hobbies-block {
+        display: grid;
+        justify-items: center;
+        span {
+            margin: 3vh 0 !important;
+            text-align: center;
+        }
+    }
+
+    // --------- modifying portfolio page ------------- //
+    .portfolio-main {
+        margin: 0vh 0vw -10vh 10vw !important;
+        padding: 0vh -25vw 0 25vw !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80% !important;
+    }
+
+    .tertiary-headline {
+        margin: 8vh 0 -3vh 0 ;
+        font-size: 1.7rem;
+    }
+
+    .project {
+        padding: -10vh 10vw;
+        font-size: $body-text-size-smallest;
+    }
+
+    // --------- modifying contact page ------------- //
+    .contact-main {
+        margin: -20vh 10vw -10vh 10vw !important; // locks in proportions of page to show the edges
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden; // clips page to proportions
+        padding: 15vh 5vw;
+    }
+
+    .formInput-message {
+        max-width: 45vw;
+    }
+
+    .formInput {
+        display: grid;
+    }
+    
+    .formInput-submit {
+        display: grid;
+        align-items: center;
+        padding: 3vh 15vw;
+    }
+}

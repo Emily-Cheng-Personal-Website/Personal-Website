@@ -6,3 +6,4 @@ Updates on Part II:
 - Contact page added with fields & submit button linked to external HTML validation page
 - Validation page added
 - Major formatting changes including but not limited to: dynamic hover effects on links and images, improvements to layout (using flex/grid etc), switch to proportional units, and fixed background. 
+- Added support for mobile & tablet view
